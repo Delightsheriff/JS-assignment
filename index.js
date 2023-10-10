@@ -1,3 +1,4 @@
+/*
 // Create an array to store JAMB student objects
 var jambStudents = [];
 
@@ -96,3 +97,26 @@ if (jambStudents[3].score >= 70) {
     `${jambStudents[3].firstName} ${jambStudents[3].lastName} has failed`
   );
 }
+*/
+const student = {
+  name: "Amadi Sheriff Delight",
+  age: 27,
+  payments: true,
+};
+
+const gradeChecker = (student) => {
+  if (student.payments && student.age > 16 && student.name.includes("a")) {
+    console.log(`${student.name} is in Grade A`);
+    return;
+  }
+  if ((student.payments && student.age > 16) || student.name.includes("a")) {
+    console.log(`${student.name} is in Grade B`);
+    return;
+  }
+  if (student.payments || (student.age > 16 && student.name.includes("a"))) {
+    console.log(`${student.name} is in Grade C`);
+    return;
+  }
+  console.log(`${student.name} is not eligible for any grade.`);
+};
+gradeChecker(student);
